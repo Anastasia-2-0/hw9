@@ -10,17 +10,17 @@ ChetNumbers(number);
 
 void ChetNumbers(int number)
 {
-    if (number < 0)
+    if (number > 1)
     {
-        Console.Write($"{number} не натуральное число");
-    }
-    if (number % 2 == 0)
-    {
-        Console.Write(number);
-        Console.Write(",");
-    }
-    while (number > 1)
-    {
-    ChetNumbers(number - 1);
+        ChetNumbers(number - 1);
+        if (number < 0)
+        {
+            Console.Write($"{number} не натуральное число");
+        }
+        if (number % 2 == 0)
+        {
+            Console.Write(number);
+            Console.Write(",");
+        }
     }
 }
